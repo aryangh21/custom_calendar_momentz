@@ -1,0 +1,10 @@
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/CMakeFiles/INSTALL.dir
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/CMakeFiles/ALL_BUILD.dir
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/CMakeFiles/ZERO_CHECK.dir
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_app.dir
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/flutter/CMakeFiles/flutter_assemble.dir
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/flutter/CMakeFiles/INSTALL.dir
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/runner/CMakeFiles/example.dir
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/runner/CMakeFiles/INSTALL.dir
+C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\build\windows\x64\CMakeFiles\cb5beac1f975e06e94b7dbfcd158c636\flutter_windows.dll.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\build\windows\x64\CMakeFiles\df07f7b1ffb8781cf61d407b156c92b2\flutter_assemble.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\windows\flutter\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\build\windows\x64\flutter\CMakeFiles\flutter_assemble" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{05D4C197-47A2-3E6E-9075-F1C23093D392}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
