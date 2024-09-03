@@ -1,25 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
+    <ClCompile Include="C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
+    <ClCompile Include="C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc">
+    <ClCompile Include="C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\windows\flutter\ephemeral\cpp_client_wrapper\plugin_registrar.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\windows\flutter\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\windows\flutter\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{05D4C197-47A2-3E6E-9075-F1C23093D392}</UniqueIdentifier>
+      <UniqueIdentifier>{B3331A0A-2D44-3C94-BFDC-81867E2F3164}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{1035B7F8-14E1-321E-9CED-7386C627184C}</UniqueIdentifier>
+      <UniqueIdentifier>{AD657586-2126-3134-9669-E4DDF0192005}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

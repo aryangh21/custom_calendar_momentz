@@ -18,7 +18,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DF7F1BD3-12DB-3056-B994-5F15D6177211}</ProjectGuid>
+    <ProjectGuid>{9BAE8BF2-73CC-3586-B1B6-A1C85A0D395D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -100,7 +100,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\build\windows\x64\CMakeFiles\5c820dc386a6dc18e336283aee633e9c\INSTALL_force.rule">
+    <CustomBuild Include="C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\build\windows\x64\CMakeFiles\01e254bbe5105a04cd1685b275c273db\INSTALL_force.rule">
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BuildInParallel>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> </Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
@@ -113,7 +113,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\build\windows\x64\runner\CMakeFiles\INSTALL_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\build\windows\x64\runner\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">true</BuildInParallel>
@@ -128,7 +128,7 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\build\windows\x64\runner\CMakeFiles\INSTALL_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\build\windows\x64\runner\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</VerifyInputsAndOutputsExist>
       <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</BuildInParallel>
@@ -143,20 +143,20 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\build\windows\x64\runner\CMakeFiles\INSTALL_force</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\build\windows\x64\runner\CMakeFiles\INSTALL_force</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\build\windows\x64\ZERO_CHECK.vcxproj">
-      <Project>{4B03A80A-3E92-33D7-91CB-AC1B4EEFFB60}</Project>
+    <ProjectReference Include="C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\build\windows\x64\ZERO_CHECK.vcxproj">
+      <Project>{62B251B0-060B-3128-8B0E-C7B5F8CF9E9B}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\ghorp\Desktop\Projects\MomentzFlutterFrover\custom_calendar\syncfusion_flutter_calendar\example\build\windows\x64\runner\ALL_BUILD.vcxproj">
-      <Project>{08B609BC-15D7-312C-BE29-8A8FB129A722}</Project>
+    <ProjectReference Include="C:\Users\ghorp\Desktop\Projects\flutter_calendar_view\example\build\windows\x64\runner\ALL_BUILD.vcxproj">
+      <Project>{80729A77-3308-3889-92E7-C5648403B39C}</Project>
       <Name>ALL_BUILD</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

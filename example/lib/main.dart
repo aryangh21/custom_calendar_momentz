@@ -1,125 +1,98 @@
+import 'dart:ui';
+
+import 'package:calendar_view/calendar_view.dart';
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_calendar/calendar.dart';
+
+import 'pages/home_page.dart';
+
+DateTime get _now => DateTime.now();
 
 void main() {
-  return runApp(CalendarApp());
+  runApp(MyApp());
 }
 
-/// The app which hosts the home page which contains the calendar on it.
-class CalendarApp extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: 'Calendar Demo', home: MyHomePage());
+    return CalendarControllerProvider(
+      controller: EventController()..addAll(_events),
+      child: MaterialApp(
+        title: 'Flutter Calendar Page Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.light(),
+        scrollBehavior: ScrollBehavior().copyWith(
+          dragDevices: {
+            PointerDeviceKind.trackpad,
+            PointerDeviceKind.mouse,
+            PointerDeviceKind.touch,
+          },
+        ),
+        home: HomePage(),
+      ),
+    );
   }
 }
 
-/// The hove page which hosts the calendar
-class MyHomePage extends StatefulWidget {
-  /// Creates the home page to display teh calendar widget.
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  // ignore: library_private_types_in_public_api
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: SfCalendar(
-      view: CalendarView.month,
-      dataSource: MeetingDataSource(_getDataSource()),
-      // by default the month appointment display mode set as Indicator, we can
-      // change the display mode as appointment using the appointment display
-      // mode property
-      monthViewSettings: const MonthViewSettings(
-          showAgenda: true,
-          appointmentDisplayMode: MonthAppointmentDisplayMode.appointment),
-    ));
-  }
-
-  List<Meeting> _getDataSource() {
-    final List<Meeting> meetings = <Meeting>[];
-    final DateTime today = DateTime.now();
-    final DateTime startTime = DateTime(today.year, today.month, today.day, 13);
-    print(startTime);
-    final DateTime endTime = startTime.add(const Duration(hours: 2));
-    meetings.add(Meeting(
-      'Conference',
-      startTime,
-      endTime,
-      const Color(0xFF0F8644),
-      false,
-    ));
-    return meetings;
-  }
-}
-
-/// An object to set the appointment collection data source to calendar, which
-/// used to map the custom appointment data to the calendar appointment, and
-/// allows to add, remove or reset the appointment collection.
-class MeetingDataSource extends CalendarDataSource {
-  /// Creates a meeting data source, which used to set the appointment
-  /// collection to the calendar
-  MeetingDataSource(List<Meeting> source) {
-    appointments = source;
-  }
-
-  @override
-  DateTime getStartTime(int index) {
-    return _getMeetingData(index).from;
-  }
-
-  @override
-  DateTime getEndTime(int index) {
-    return _getMeetingData(index).to;
-  }
-
-  @override
-  String getSubject(int index) {
-    return _getMeetingData(index).eventName;
-  }
-
-  @override
-  Color getColor(int index) {
-    return _getMeetingData(index).background;
-  }
-
-  @override
-  bool isAllDay(int index) {
-    return _getMeetingData(index).isAllDay;
-  }
-
-  Meeting _getMeetingData(int index) {
-    final dynamic meeting = appointments![index];
-    late final Meeting meetingData;
-    if (meeting is Meeting) {
-      meetingData = meeting;
-    }
-
-    return meetingData;
-  }
-}
-
-/// Custom business object class which contains properties to hold the detailed
-/// information about the event data which will be rendered in calendar.
-class Meeting {
-  /// Creates a meeting class with required details.
-  Meeting(this.eventName, this.from, this.to, this.background, this.isAllDay);
-
-  /// Event name which is equivalent to subject property of [Appointment].
-  String eventName;
-
-  /// From which is equivalent to start time property of [Appointment].
-  DateTime from;
-
-  /// To which is equivalent to end time property of [Appointment].
-  DateTime to;
-
-  /// Background which is equivalent to color property of [Appointment].
-  Color background;
-
-  /// IsAllDay which is equivalent to isAllDay property of [Appointment].
-  bool isAllDay;
-}
+List<CalendarEventData> _events = [
+  CalendarEventData(
+    date: _now,
+    title: "Project meeting",
+    description: "Today is project meeting.",
+    startTime: DateTime(_now.year, _now.month, _now.day, 18, 30),
+    endTime: DateTime(_now.year, _now.month, _now.day, 22),
+  ),
+  CalendarEventData(
+    date: _now.add(Duration(days: 1)),
+    startTime: DateTime(_now.year, _now.month, _now.day, 18),
+    endTime: DateTime(_now.year, _now.month, _now.day, 19),
+    title: "Wedding anniversary",
+    description: "Attend uncle's wedding anniversary.",
+  ),
+  CalendarEventData(
+    date: _now,
+    startTime: DateTime(_now.year, _now.month, _now.day, 14),
+    endTime: DateTime(_now.year, _now.month, _now.day, 17),
+    title: "Football Tournament",
+    description: "Go to football tournament.",
+  ),
+  CalendarEventData(
+    date: _now.add(Duration(days: 3)),
+    startTime: DateTime(_now.add(Duration(days: 3)).year,
+        _now.add(Duration(days: 3)).month, _now.add(Duration(days: 3)).day, 10),
+    endTime: DateTime(_now.add(Duration(days: 3)).year,
+        _now.add(Duration(days: 3)).month, _now.add(Duration(days: 3)).day, 14),
+    title: "Sprint Meeting.",
+    description: "Last day of project submission for last year.",
+  ),
+  CalendarEventData(
+    date: _now.subtract(Duration(days: 2)),
+    startTime: DateTime(
+        _now.subtract(Duration(days: 2)).year,
+        _now.subtract(Duration(days: 2)).month,
+        _now.subtract(Duration(days: 2)).day,
+        14),
+    endTime: DateTime(
+        _now.subtract(Duration(days: 2)).year,
+        _now.subtract(Duration(days: 2)).month,
+        _now.subtract(Duration(days: 2)).day,
+        16),
+    title: "Team Meeting",
+    description: "Team Meeting",
+  ),
+  CalendarEventData(
+    date: _now.subtract(Duration(days: 2)),
+    startTime: DateTime(
+        _now.subtract(Duration(days: 2)).year,
+        _now.subtract(Duration(days: 2)).month,
+        _now.subtract(Duration(days: 2)).day,
+        10),
+    endTime: DateTime(
+        _now.subtract(Duration(days: 2)).year,
+        _now.subtract(Duration(days: 2)).month,
+        _now.subtract(Duration(days: 2)).day,
+        12),
+    title: "Chemistry Viva",
+    description: "Today is Joe's birthday.",
+  ),
+];

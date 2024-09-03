@@ -1,322 +1,179 @@
-## Unreleased
-
-**Bugs**
-* \#FB57253 - Now, the appointment details are passed correctly to the [monthCellBuilder](https://pub.dev/documentation/syncfusion_flutter_calendar/latest/calendar/SfCalendar/monthCellBuilder.html) callback when navigating to the months using the navigation buttons.
-
-## [25.2.3] - 05/13/2024
-**General**
-* Upgraded the `timezone` package to the latest version 0.9.3.
-
-**Bug fixes**
-* \#FB51676 - Now, the handleLoadMore method is called once when the CalendarDataSourceAction is set to reset.
-
-## [25.1.35] - 03/15/2024
-**General**
-* Provided th​e Material 3 themes support.
-
-**Bug fixes**
-* \#FB50948 - Now, the 'setState() or markNeedsBuild() called during the build' exception will not be thrown when tapping today's button after swiping the `timelineMonth` view.
-* \#FB50846 - Now, text size remains consistent when the app state or themes gets changed.
-
-## [24.1.46] - 17/01/2024
-**General**
-* Upgraded the `intl` package to the latest version 0.19.0.
-
-## [22.2.5]
-**Features**
-* Provided support to accessibility for builders in the Flutter event calendar.
-
-## [20.3.56]
-**Features**
-* Provided text style customization support for the text in the placeholder (`No events` and `No selected date`) in the month agenda view and (`No events`) in the schedule view of the flutter event calendar.
-
-## [20.2.43]
-**Enhancements**
-* Now, we have improved the behavior of the `appointmentBuilder` details `date` value to hold the start date of the appointment view in the Flutter event calendar.
-
-## [20.2.36]
-**Features**
-* Now, we have improved the behavior of the month header of ScheduleView with a minimum date in the Flutter event calendar.
-
-## [20.1.47]
-**Features**
-* Provided support for the number of days in view, it is used to customize the days count in the flutter event calendar.
-* Provided support for recurring appointments on the last day of month in the flutter event calendar.
-
-## [19.4.50] - 02/08/2022
-**Bug fixes**
-* Now, the week number is displayed properly when setting the `firstDayOfWeek` property in the Flutter event calendar.
-* Now, the appointments are added to the schedule view properly with an empty appointment schedule weeks are hidden using `hideEmptyScheduleWeek`.
-
-**Enhancements**
-* Now, improved the Flutter calendar allowedViews UI to show the `Scrollbar`.
-
-## [19.4.38] - 12/17/2021
-**Features**
-* Provided support to get calendar details based on the given offset passed through an argument by using the method of the `getCalendarDetailsAtOffset`.
-
-**Enhancements**
-* Now, improved the allowedViews UI in the flutter event calendar.
-
-## [19.3.57] - 12/06/2021
-**Bug fixes**
-* Now, the localization is working properly for the All day label text in schedule view of the Flutter event calendar.
-
-## [19.3.45] - 10/11/2021
-
-**Enhancements**
-* Now, the non-working dates are disabled in the date range picker for the work week views of the calendar.
-
-## [19.3.43] - 09/30/2021
-
-**Features**
-* Provided resize, drag-and-drop support to reschedule appointments in the event calendar.
-
-**Breaking changes**
-* The default `cellEndPadding` value has been changed in the SfCalendar.
-
-**Enhancements**
-* Now the calendar will return the recurrence appointment details in the given custom data type instead of `Appointment` type by overriding the `convertAppointmentToObject` method of the `CalendarDataSource`.
-
-## [19.2.55] - 08/11/2021
-**Bug fixes**
-* Now, the appointment will not intersect when the end time and start time of different appointment is 24 hours for two consecutive days.
-
-**Features**
-* Provided support to customize the background color of the all-day panel.
-
-## [19.2.44] - 06/30/2021
-**Features**
-* Provided support to display week numbers of the year.
-* Provided ID, recurrence ID, and appointment type support.
-* Provided builder support for the resource header view.
-* Now, the occurrence appointment will contain the occurrence date details in the tap callbacks. 
-* Now, appointments will be displayed based on the `appointmentDisplayMode` in month view when the month cell builder is used.
-
-## [19.1.54] - 03/30/2021
-**Bug fixes**
-* Now, the localization is working properly for the spanned appointment count text in Flutter event calendar.
-
-**Features**
-* Provided the LoadMore support for the event calendar.
-* Provided the negative values support for BYSETPOS in recurrence to display the appointment in the last and second last week of a month.
-* Provided the support for the header date format in the Flutter event calendar.
-* Provided the support for getting appointments between the start and end date range by using the `getVisibleAppointments` method in the Flutter event calendar.
-* Provided the current time indicator support for timeslot views.
-* Provided the support for enabling and disabling the swiping interaction in the Flutter event calendar.
-* Provided the support for the selected date changed callback in the Flutter event calendar.
-* Improved the timeslot views disabled slots appearance in the Flutter event calendar.
-
-**Breaking changes**
-* The `startTime` and `endTime` properties of the `Appointment` class are now marked as required.
-* The `startTime` property of the `RecurrenceProperties` class is now marked as required.
-* The `startTime` and `endTime` properties of the `TimeRegion` class are now marked as required.
-
-## [18.4.34] - 01/12/2021
-**Bug fixes**
-* Now, the date range picker layouting properly in the calendar header, when the `showDatePickerButton` property enabled.
-
-## [18.4.33] - 01/05/2021
-No changes.
-
-## [18.4.32] - 12/30/2020
-No changes.
-
-## [18.4.31] - 12/22/2020
-**Bug fixes**
-* Now, the month view changes properly by date range picker when placing `SfCalendar` in `WillPopUp` widget.
-* Now, the appointments are sorting properly in the month cells of `SfCalendar`.
-
-## [18.4.30] - 12/17/2020
-**Features**
-* The custom builder support is provided for the time region and the appointment views in the calendar.
-* Provided the interaction support for the resource header. 
-* Support is provided to the right end padding for the cell touch region when the cell has an appointment in the calendar.
-
-**Enhancements**
-* The animation for view switching, selection ripple effect, and header picker pop-up animation is improved.
-
-**Breaking changes**
-* Now, the display date that does not contain an appointment will show the text as `No events`.
-
-## [18.3.50] - 11/17/2020
-**Bug fixes**
-* Now, the time of the `displayDate` of `CalendarController` is working properly with the `timeInterval` changes.
-
-
-## [18.3.48] - 11/11/2020
-**Bug fixes**
-* Now, the `SfCalendar` time zone support has been enhanced to IANA time zone support.
-
-
-## [18.3.38] - 10/07/2020
-No changes.
-
-## [18.3.35] - 10/01/2020
-**Bug fixes**
-* Now, the appointment will render on the correct timeslot, when the local set as French,  Canada, and in `Eastern Standard Time`.
-* Now, the appointments will render on the correct timeslot, when the start time of the time slot is set as a different value.
-
-**Features**
-* Timeline month view support
-* Resource view support
-* Internal view navigation support
-* Blackout dates support
-* Hide leading and trailing dates support
-* The custom builder support for the month cells and the month header of the schedule view
-* Agenda appointment time format support
-
-**Breaking changes**
-* The `todayTextStyle` property from the `MonthCellStyle` class has been deprecated, use the same property from the `SfCalendar` class instead.
-* The `timeIntervalHeight` property will not work for timeline views, use the `timeIntervalWidth` property instead for the timeline views alone.
-* The default value for the `timeIntervalWidth` is changed from 40 to 60.
-* The appointment UI width is reduced in the day, week, and workweek views.
-* Now, the `view` property from the `SfCalendar` does not work dynamically. To switch the view dynamically, use the same property from the `CalendarController`.
-
-## [18.2.59] - 09/23/2020
-No changes.
-
-## [18.2.57] - 09/08/2020
-**Bug fixes**
-* Now, the calendar appointment text will no longer disappear when screen width changed.
-
-
-## [18.2.56] - 09/01/2020
-No changes.
-
-## [18.2.55] - 25/08/2020
-
-**Bug fixes**
-* Now, the `SfCalendar` will no longer throw any exceptions when adding more appointments in the same timeslots.
-
-## [18.2.54] - 08/18/2020
-
-**Features**
-* The time format support has been given for the agenda view and schedule view appointments.
-
-## [18.2.48] - 08/04/2020
-
-No changes.
-
-## [18.2.47] - 07/28/2020
-
-**Bug fixes**
-* Now, the issue with swiping efficiency with appointments has been resolved and enhanced in calendar views.
-
-## [18.2.46+1] - 07/24/2020
-
-**Bug fixes**
-* Now, the issue overflow not found is cleared with the Flutter latest beta channel.
-
-## [18.2.46] - 07/21/2020
-
-**Bug fixes**
-* Now, the `SfCalendar` will not throw any exceptions when tapping the agenda view.
-
-## [18.2.45] - 07/14/2020
-
-**Bug fixes**
-* Now, the `SfCalendar` shows the proper month in a week and workweek when view changed.
-
-
-## [18.2.44] - 07/07/2020
-
-**Features**
-* The long press callback support 
-* Schedule view support
-* Special time regions support
-* Navigation arrow support
-* Mouse hovering for all calendar elements [web]
-
-**Bug fixes**
-* Now, the appointment indicator was shown properly in the month cells using the recurrence rule.
-* Now, the onTap callback of the `SfCalendar` calling properly when tapping out of the calendar.
-* Now, the scrolling is working properly when touchpoint is on the calendar inside a Column widget.
-
-## [18.1.55-beta] - 06/03/2020
-
-**Bug fixes**
-* Now, the month cell dates are aligned properly with the Flutter latest beta channel.
-
-## [18.1.52-beta] - 05/14/2020
-
-**Bug fixes**
-* Now, the visible dates do not show the repeated dates when the local time zone has daylight saving in `SfCalendar`.
-
-## [18.1.48-beta] - 05/05/2020
-
-No changes.
-
-## [18.1.46-beta] - 04/28/2020
-
-**Bug fixes**
-* The error `No file or variants found for assert:packages/timezone/data/2019c.tzf` now cleared.
-
-## [18.1.45-beta] - 04/21/2020
-
-No changes.
-
-## [18.1.44-beta] - 04/14/2020
-
-**Bug fixes**
-* The `parseRRule` now works without the `count` value in `SfCalendar`.
-
-## [18.1.43-beta] - 04/07/2020 
-
-No changes.
-
-## [18.1.42-beta] - 04/01/2020 
-
-No changes.
-
-## [18.1.36-beta] - 03/19/2020
-
-**Features**
-* Right-to-left direction support.
-* Localization support.
-* Accessibility support.
-* Calendar web support.
-* Minimum and maximum date support.
-* Theme support.
-* Calendar controller for programmatic date selection and date navigation.
-
-## [17.4.51-beta] - 02/25/2020
-
-No changes.
-
-## [17.4.50-beta] - 02/19/2020
-
-No changes.
-
-## [17.4.46-beta] - 01/30/2020
-
-**Features**
-* Provided the all-day appointment expander support in day/week/work week views.
-* Provided the `appointments` property setter in `CalendarDataSource`.
-
-## [17.4.43-beta] - 01/14/2020
-
-No changes.
-
-## [17.4.40-beta] - 12/18/2019
-
-**Breaking changes**
-* Renamed the `dataSource` property as `appointments` in `CalendarDataSource` abstract class.
-* The `appointmentMapper` implementation replaced by override methods for custom appointments.
-* The `timeZone` package updated to latest version and its database updated.
-* The enum properties in `CalendarDataSourceAction` renamed as `add`, `remove` and `reset` instead of `Add`, `Remove` and `Reset`.
-
-## [17.4.39-beta] - 12/17/2019
-
-Initial release.
-
-**Features** 
-* Day, week, workweek, timeline day, timeline week, timeline workweek, and month. Seven built-in calendar views.
-* Appointment scheduling. Default and custom appointments supported.
-* Recursive appointments with daily, weekly, monthly, and yearly recurrence types.
-* Time zones support for events and calendar.
-* Different nonworking days.
-* Different first day of week for all applicable views.
-* Flexible start and end hours for time slot views.
-* Agenda view support in calendar month view.
-* Additional features like customizable calendar appearance and format.
+# [1.2.0 - 10 May 2024](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/1.2.0)
+
+- Fixed issue when adding full-day events to WeekView, event is not display at correct date.  [#259](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/259)
+- Added support for onLongPress of event in day, week and month view. [#342](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/pull/342)
+- Added check to keep hour in timeline (in day and week view) if LiveTimeIndicator time or backgroundView dosen't overlap. [#336](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/336)
+- Added event tap, double tap and long press for full day event in day and week view. [#260](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/260)
+- Fixed live time indicator not displaying on correct position when start and end hour is set. [#366](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/366)
+- Fixed synchronization of scroll between pages in day and week view. [#186](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/186)
+- Added showWeekTileBorder field whether to show border for header in month view. [#306](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/306)
+- Fixed an issue related to hiding day, which is not in the current month in MonthView. [#328](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/328)
+- Added header title for full day events in week view. [#308](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/308) 
+- Added support for double tapping gestures on any event in day, week, and month view. [#195](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/195)
+- Added support to set end time of day and week view. [#298](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/298)
+- Added support for horizontal scroll physics of week and month view page. [#314](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/314)
+- Fixed issue related to the live time indicator is that it is not in the correct position when startHour is set for the week and day view. [#346](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/346)
+- Fixed issue of onDateTap returns wrong date when startHour is set for week and day view. [#341](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/341)
+- Fixed issue related to onDateTap no triggered in WeekView and dayView. [#332](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/332)
+
+# [1.1.0 - 28 Feb 2024](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/1.1.0) 
+
+- Fixed issue related to Hiding Header [#299](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/pull/299)
+- Fixed issue related to auto scroll to initial duration for day
+  view. [#269](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/269)
+- Added
+  feature added a callback for the default header title. [#241](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/241)
+- Added
+  feature added the quarterHourIndicator for the DayView & halfHourIndicator and
+  quarterHourIndicator for WeekView. [#270](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/270)
+- Added
+  feature added Support for changing the week day position(top/bottom) in weekView. [#283](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/283)
+- Adds new flag `includeEdges` in `EventArrangers`. [#290](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/pull/294)
+- Fixed null check exception while adding events. [#282](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/282)
+- Added new method `update` to update the events in `EventController`. [#125](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/125)
+- Added new parameter `includeFullDayEvents` in `getEventsOnDay` to decide whether to include full-day events in the returned list or not.
+- Added getters `isRangingEvent` and `isFullDayEvent` in `CalendarEventData` to check if the event is a ranging event or a full-day event.
+- Added new method `occursOnDate` in `CalendarEventData` to check if the event occurs on the given date or not.
+- Made `description` in `CalendarEventData` nullable.
+- Fixed issue in `MonthView` event's titleStyle to set the style from specific event.[#325](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/pull/325)
+### Deprecations
+  - Deprecated `events` getter in `EventController` and adds `allEvents` to replace it.
+
+# [1.0.4 - 9 Aug 2023](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/1.0.4)
+
+- Fixed
+  Issue [#219 - There is an issue with the daily view layout display](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/219)
+- Fixed
+  Issue [#205 - SafeArea can't be deactivated on MonthView](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/205)
+- Fixed
+  Issue [#237 - DayView & MonthView layout issue in landscape mode](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/237)
+- Added Feature
+  [#57 - Change default start hour in DayView](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/57)
+- Fixed
+  Issue [#225 - Unwanted space at top in DayView while using sliver](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/225)
+
+# [1.0.3 - 3 Apr 2023](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/1.0.3)
+
+- Added
+  Feature [#172 - Press Detector builder for day view and week view](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/pull/172)
+- Added
+  Feature [#147 - Added text style and description style in CalendarEventData](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/147)
+- Added
+  Feature [#174 - Animate to specific scroll controller offset](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/pull/174)
+- Fixed
+  Issue [#161 - Unable to add 11.30 PM to 12.00PM](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/161)
+- Fixed
+  Issue [#179 - Removing Full Day Event does not work](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/179)
+- Fixed
+  Issue [#184 - Use available vertical space month view](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/184)
+- Fixed
+  Issue [#191 - DisplayBorder in WeekDayTile in month_view_components does not work correctly](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/191)
+- Fixed
+  Issue [#197 - Some DateTimeExtensions methods are not working properly for Daylight Saving Time](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/197)
+- Fixed
+  Issue [#199 - HeaderStyle decoration no have effect on MonthView](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/199)
+
+# [1.0.2 - 10 Jan 2023](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/1.0.2)
+
+- Added
+  Feature [#144 - WeekView not support show current week number](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/144)
+- Added
+  Feature [#149 - Full day events support](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/149)
+- Fixed
+  Issue [#142 - week day not align center](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/142)
+- Fixed
+  Issue [#146 - WeekView wrapped by SafeArea](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/146)
+
+# [1.0.1 - 25 Nov 2022](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/1.0.1)
+
+- Added
+  Feature [#26 - Support for locale](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/26)
+- Added removeWhere method in `EventController` to conditionally remove multiple
+  events. (Fixes
+  Issue [#31](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/31))
+- Added customization in calendar views and
+  closes [#34](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/34).
+    - Added Customizations in `DayView`.
+      Adds `dateStringBuilder`, `timeStringBuilder`, `headerStyle`
+      parameters in `Dayview`,
+    - Added Customizations in `MonthView`.
+      Adds `headerStringBuilder`, `dateStringBuilder`
+      , `weekDayStringBuilder`, `headerStyle` parameters in `WeekView`.
+    - Added Customizations in `WeekView`.
+      Adds `headerStyle`,  `headerStringBuilder`
+      , `timeLineStringBuilder`, `weekDayStringBuilder`, `weekDayDateStringBuilder`
+      parameters
+      in `WeekView`,
+- Added onTap lister in day and week views. issue #50.
+- Updated calculation of day difference. issue #80, #97.
+- Fixed
+  Issue [#93 - Showing only 1 day in DayView](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/93)
+- Fixed
+  Issue [#130 - Week view incorrectly displays events when a day contains overlapping events](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/130)
+
+# [1.0.0 - 12 Aug 2022](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/1.0.0)
+
+- **Breaking Changes**
+    - Improved logic to compare `CalendarEventData`.
+
+      Note: This changes the behaviour of comparing two events using `==`
+      operator. Please test your
+      app properly after updating to this version.
+
+- Added 15,30 and 60 minutes slots for `onDateLongPress` callback in Week and
+  Day view.
+- Added method to update filter in `EventController`.
+- Restructured the logic to store single time events.
+- Added method to scroll to an event.
+  Issue [#30 - Scroll to an event in day view](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/30)
+- Added
+  Feature [#36 - Feature/custom strings](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/pull/36)
+- Use normalized dates in difference calculations.
+
+# [0.0.5 - 2 Jun 2022](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/0.0.5)
+
+- Fixed
+  Issue [#48 - WeekView header date is different from the calendar view](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/48)
+- Added
+  Feature [#46 - Change beginning of week in MonthView](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/46)
+- Fixed
+  Issue [#42 - WeekDayTile causes RenderFlex-Overflow](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/42)
+- Fixed
+  Issue [#65 - Adding onCellTap callback breaks whole calendar](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/65)
+- Fixed
+  Issue [#62 - Missing redraw events](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/62)
+- Fixed
+  Issue [#16 - Scroll to index/liveTime](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/16)
+- Show live time indicator line above event tiles.
+  PR [#67](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/pull/67)
+
+# [0.0.4 - 2 Mar 2022](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/0.0.4)
+
+- Fixed
+  Issue [#39 - Detect a long press on the calendar](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/39)
+- Fixed
+  Issue [#38 - Modifying CalendarEventData](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/38)
+- Fixed
+  Issue [#27 - EventController remove event don't work](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/27)
+- Fixed
+  Issue [#13 - Give the option to show weekdays in a WeekView.](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/issues/13)
+
+# [0.0.3 - 12 Oct 2021](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/0.0.3)
+
+- Added support for multiple day events
+
+# [0.0.2 - 3 Sep 2021](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/0.0.2)
+
+- Updated `README.md` file.
+- Added license information in package files.
+- Updated project description in `pubspec.yaml`
+- Updated documentation.
+- Added `CalendarControllerProvider`.
+- Added `onEventTap` callback in `WeekView` and `DayView`.
+- Added `onCellTap` callback in `MonthView`.
+- Make `controller` optional parameter in all views
+  where `CalendarControllerProvider` is provided.
+
+# [0.0.1 - 26 Aug 2021](https://github.com/SimformSolutionsPvtLtd/flutter_calendar_view/tree/0.0.1)
+
+- Initial release

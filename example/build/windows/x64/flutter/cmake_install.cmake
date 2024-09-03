@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/ghorp/Desktop/Projects/MomentzFlutterFrover/custom_calendar/syncfusion_flutter_calendar/example/windows/flutter
+# Install script for directory: C:/Users/ghorp/Desktop/Projects/flutter_calendar_view/example/windows/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
