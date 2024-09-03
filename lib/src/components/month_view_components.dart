@@ -160,47 +160,42 @@ class FilledCell<T extends Object?> extends StatelessWidget {
                 margin: EdgeInsets.only(top: 5.0),
                 clipBehavior: Clip.antiAlias,
                 decoration: BoxDecoration(),
-                child: SingleChildScrollView(
+                child: GridView.builder(
                   physics: BouncingScrollPhysics(),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: List.generate(
-                      events.length,
-                      (index) => GestureDetector(
-                        onTap: () => onTileTap?.call(events[index], date),
-                        onLongPress: () =>
-                            onTileLongTap?.call(events[index], date),
-                        onDoubleTap: () =>
-                            onTileDoubleTap?.call(events[index], date),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: events[index].color,
-                            borderRadius: BorderRadius.circular(4.0),
-                          ),
-                          margin: EdgeInsets.symmetric(
-                              vertical: 2.0, horizontal: 3.0),
-                          padding: const EdgeInsets.all(2.0),
-                          alignment: Alignment.center,
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: Text(
-                                  events[index].title,
-                                  overflow: TextOverflow.clip,
-                                  maxLines: 1,
-                                  style: events[index].titleStyle ??
-                                      TextStyle(
-                                        color: events[index].color.accent,
-                                        fontSize: 12,
-                                      ),
-                                ),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, // Two columns
+                    childAspectRatio: 1.2, // Adjust the height of the rows
+                  ),
+                  itemCount: events.length,
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () => onTileTap?.call(events[index], date),
+                      onLongPress: () =>
+                          onTileLongTap?.call(events[index], date),
+                      onDoubleTap: () =>
+                          onTileDoubleTap?.call(events[index], date),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: events[index].color,
+                          borderRadius: BorderRadius.circular(4.0),
+                        ),
+                        margin: EdgeInsets.symmetric(
+                            vertical: 2.0, horizontal: 3.0),
+                        padding: const EdgeInsets.all(2.0),
+                        alignment: Alignment.center,
+                        child: Text(
+                          events[index].title,
+                          overflow: TextOverflow.clip,
+                          maxLines: 1,
+                          style: events[index].titleStyle ??
+                              TextStyle(
+                                color: events[index].color.accent,
+                                fontSize: 12,
                               ),
-                            ],
-                          ),
                         ),
                       ),
-                    ),
-                  ),
+                    );
+                  },
                 ),
               ),
             ),
