@@ -16,6 +16,7 @@ class MonthViewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MonthView(
+      useGridLayout: true,
       key: state,
       width: width,
       hideDaysNotInMonth: false,

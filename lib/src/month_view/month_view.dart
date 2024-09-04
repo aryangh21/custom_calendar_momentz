@@ -170,10 +170,13 @@ class MonthView<T extends Object?> extends StatefulWidget {
   /// defines that show and hide cell not is in current month
   final bool hideDaysNotInMonth;
 
+  final bool useGridLayout;
+
   /// Main [Widget] to display month view.
   const MonthView({
     Key? key,
     this.showBorder = true,
+    this.useGridLayout = false,
     this.borderColor = Constants.defaultBorderColor,
     this.cellBuilder,
     this.minMonth,
@@ -383,6 +386,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
                               cellBuilder: _cellBuilder,
                               cellRatio: _cellAspectRatio,
                               date: date,
+                              useGridLayout: widget.useGridLayout,
                               showBorder: widget.showBorder,
                               startDay: widget.startDay,
                               physics: widget.pagePhysics,
@@ -544,10 +548,12 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
     isToday,
     isInMonth,
     hideDaysNotInMonth,
+    isgridlayout,
   ) {
     if (hideDaysNotInMonth) {
       return FilledCell<T>(
         date: date,
+        useGridLayout: isgridlayout,
         shouldHighlight: isToday,
         backgroundColor: isInMonth ? Constants.white : Constants.offWhite,
         events: events,
@@ -560,6 +566,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
     return FilledCell<T>(
       date: date,
       shouldHighlight: isToday,
+      useGridLayout: isgridlayout,
       backgroundColor: isInMonth ? Constants.white : Constants.offWhite,
       events: events,
       onTileTap: widget.onEventTap,
@@ -647,6 +654,7 @@ class MonthViewState<T extends Object?> extends State<MonthView<T>> {
 class _MonthPageBuilder<T> extends StatelessWidget {
   final double cellRatio;
   final bool showBorder;
+  final bool useGridLayout;
   final double borderSize;
   final Color borderColor;
   final CellBuilder<T> cellBuilder;
@@ -676,6 +684,7 @@ class _MonthPageBuilder<T> extends StatelessWidget {
     required this.startDay,
     required this.physics,
     required this.hideDaysNotInMonth,
+    required this.useGridLayout,
   }) : super(key: key);
 
   @override
@@ -713,6 +722,7 @@ class _MonthPageBuilder<T> extends StatelessWidget {
                 monthDays[index].compareWithoutTime(DateTime.now()),
                 monthDays[index].month == date.month,
                 hideDaysNotInMonth,
+                useGridLayout, // Using the useGridLayout property here
               ),
             ),
           );
