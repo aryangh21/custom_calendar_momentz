@@ -209,7 +209,7 @@ class FilledCell<T extends Object?> extends StatelessWidget {
                                     TextStyle(
                                       color:
                                           events[transposedIndex].color.accent,
-                                      fontSize: 12,
+                                      fontSize: 8,
                                     ),
                               ),
                             ),
@@ -247,7 +247,7 @@ class FilledCell<T extends Object?> extends StatelessWidget {
                                         style: events[index].titleStyle ??
                                             TextStyle(
                                               color: events[index].color.accent,
-                                              fontSize: 12,
+                                              fontSize: 8,
                                             ),
                                       ),
                                     ),
