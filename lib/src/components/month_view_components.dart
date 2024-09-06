@@ -173,15 +173,28 @@ class FilledCell<T extends Object?> extends StatelessWidget {
                         ),
                         itemCount: events.length,
                         itemBuilder: (context, index) {
+                          // Column-major logic
+                          int columnCount = 2;
+                          int rowIndex = index % columnCount;
+                          int columnIndex = index ~/ columnCount;
+
+                          int transposedIndex = columnIndex +
+                              rowIndex *
+                                  (events.length ~/ columnCount +
+                                      (events.length % columnCount == 0
+                                          ? 0
+                                          : 1));
+
                           return GestureDetector(
-                            onTap: () => onTileTap?.call(events[index], date),
-                            onLongPress: () =>
-                                onTileLongTap?.call(events[index], date),
-                            onDoubleTap: () =>
-                                onTileDoubleTap?.call(events[index], date),
+                            onTap: () =>
+                                onTileTap?.call(events[transposedIndex], date),
+                            onLongPress: () => onTileLongTap?.call(
+                                events[transposedIndex], date),
+                            onDoubleTap: () => onTileDoubleTap?.call(
+                                events[transposedIndex], date),
                             child: Container(
                               decoration: BoxDecoration(
-                                color: events[index].color,
+                                color: events[transposedIndex].color,
                                 borderRadius: BorderRadius.circular(4.0),
                               ),
                               margin: EdgeInsets.symmetric(
@@ -189,12 +202,13 @@ class FilledCell<T extends Object?> extends StatelessWidget {
                               padding: const EdgeInsets.all(2.0),
                               alignment: Alignment.center,
                               child: Text(
-                                events[index].title,
+                                events[transposedIndex].title,
                                 overflow: TextOverflow.clip,
                                 maxLines: 1,
-                                style: events[index].titleStyle ??
+                                style: events[transposedIndex].titleStyle ??
                                     TextStyle(
-                                      color: events[index].color.accent,
+                                      color:
+                                          events[transposedIndex].color.accent,
                                       fontSize: 12,
                                     ),
                               ),
