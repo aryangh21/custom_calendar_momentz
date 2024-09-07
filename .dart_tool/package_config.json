@@ -50,12 +50,6 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "intl",
-      "rootUri": "file:///C:/Users/ghorp/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.19.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "leak_tracker",
       "rootUri": "file:///C:/Users/ghorp/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.4",
       "packageUri": "lib/",
@@ -72,6 +66,12 @@
       "rootUri": "file:///C:/Users/ghorp/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
       "packageUri": "lib/",
       "languageVersion": "3.2"
+    },
+    {
+      "name": "lints",
+      "rootUri": "file:///C:/Users/ghorp/AppData/Local/Pub/Cache/hosted/pub.dev/lints-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
     },
     {
       "name": "matcher",
@@ -128,18 +128,6 @@
       "languageVersion": "2.18"
     },
     {
-      "name": "syncfusion_flutter_core",
-      "rootUri": "../../syncfusion_flutter_core",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
-      "name": "syncfusion_flutter_datepicker",
-      "rootUri": "../../syncfusion_flutter_datepicker",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "term_glyph",
       "rootUri": "file:///C:/Users/ghorp/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
@@ -150,12 +138,6 @@
       "rootUri": "file:///C:/Users/ghorp/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
-    },
-    {
-      "name": "timezone",
-      "rootUri": "file:///C:/Users/ghorp/AppData/Local/Pub/Cache/hosted/pub.dev/timezone-0.9.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
     },
     {
       "name": "vector_math",
@@ -170,13 +152,13 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "syncfusion_flutter_calendar",
+      "name": "calendar_view",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "2.15"
     }
   ],
-  "generated": "2024-08-31T08:36:35.282340Z",
+  "generated": "2024-09-07T08:16:27.713286Z",
   "generator": "pub",
   "generatorVersion": "3.4.4",
   "flutterRoot": "file:///C:/src/flutter",
