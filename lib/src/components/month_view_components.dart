@@ -212,7 +212,7 @@ class FilledCell<T extends Object?> extends StatelessWidget {
                                       fontSize:
                                           MediaQuery.of(context).size.width >=
                                                   600
-                                              ? 12
+                                              ? 10
                                               : 8,
                                     ),
                               ),
@@ -255,7 +255,7 @@ class FilledCell<T extends Object?> extends StatelessWidget {
                                                           .size
                                                           .width >=
                                                       600
-                                                  ? 12
+                                                  ? 10
                                                   : 8,
                                             ),
                                       ),
